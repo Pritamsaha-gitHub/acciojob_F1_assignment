@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accio-Contest2</title>
+    <link rel="stylesheet" href="./index.css" />
+   
+  </head>
+  <body>
+    <header>
+      <div class="logo1">Forent</div>
+      <input type="search" placeholder="Search" />
+      <div class="options">
+        <button class="buttons">Login</button>
+        <button class="buttons">Explore</button>
+        <button class="buttons">Rent</button>
+      </div>
+    </header>
+    <main>
+      <div class="part1">
+        <div class="part1-left">
+       
+        
+            <div class="logo">About Us</div>
+        
+            <ul class="list-item">
+              <li class="tag">
+                <span class="list-icon"><i class="fa-sharp fa-solid fa-cart-shopping black"></i></span>
+                <span class="list-text">Rent Out Anything You Want</span>
+                
+              </li>
+              <li class="tag">
+                <span class="list-icon"><i class="fa-solid fa-tags black"></i> </i></span>
+                <span class="list-text">No worries about items getting lost</span>
+              <li class="tag">
+                <span class="list-icon"><i class="fa-regular fa-credit-card black"></i> </i></span>
+              <span class="list-text">Online Payments Only</span>
+            </ul>
+         
+          
+        </div>
+        <div class="part1-right">
+            <span class="list-icon list-icon-1"><i class="fa-solid fa-clock black-1"></i></span>
+            <button class="know">know more</button>
+
+        </div>
+      </div>
+      
+      <div class="name">Our Categories</div>
+      <div id="card-holder" class="card-holder">
+        
+       
+      </div>
+      
+    </main>
+    <footer>
+      <div class="div-1">
+        <p class="div1-text1">Forent</p>
+        <p class="div1-text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="div-2">
+        <p class="div2-text1">Site Map</p>
+        <p class="div2-text2">Home</p>
+        <p  class="div2-text2">Search</p>
+        <p  class="div2-text2">Explore</p>
+        <p  class="div2-text2">Login/Signup</p>
+      </div>
+      <div class="div-2">
+        <p class="div2-text1">Socials</p>
+        <p class="div2-text2">Instagram</p>
+        <p  class="div2-text2">Facebook</p>
+        <p  class="div2-text2">Liinkedin</p>
+        <p  class="div2-text2">Twitter</p>
+      </div>
+    </footer>
+    <script>
+        const arr=[
+            {
+                text1:"Electronics",
+        text2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },{
+                text1:"Clothes / Apparel",
+        text2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },{
+                text1:"Gaming",
+        text2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },{
+                text1:"Gaming",
+        text2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },{
+                text1:"Clothes / Apparel",
+        text2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },{
+                text1:"Gaming",
+        text2:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    ]
+    // <div class="card">
+    //         <span class="text-1"></span>
+    //         <span class="text-2"></span>
+    //         <div class="btn-holder">
+    //             <button class="card-btn">Know More</button>
+    //         </div>
+    //     </div>
+    const cardHolder=document.getElementById('card-holder')
+    for(let i=0;i<arr.length;i++){
+        const card=document.createElement('div')
+        card.classList.add("card")
+        const text1=document.createElement('span')
+        const text2=document.createElement('span')
+        text1.classList.add("text-1")
+        text2.classList.add("text-2")
+        text1.textContent=arr[i].text1
+        text2.textContent=arr[i].text2
+
+
+        const btnHolder=document.createElement('div')
+        btnHolder.classList.add("btn-holder")
+        const btn=document.createElement('button')
+        btn.classList.add("card-btn")
+        btn.textContent='Know More'
+
+        cardHolder.appendChild(card)
+        card.appendChild(text1)
+        card.appendChild(text2)
+        card.appendChild(btnHolder)
+        btnHolder.appendChild(btn)
+        console.log(cardHolder)
+    }
+        </script>
+    <script
+      src="https://kit.fontawesome.com/45298578b1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
